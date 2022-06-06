@@ -14,8 +14,8 @@ namespace Domain.Entities
         public int PersonID { get;private set;}
         public DateTime Date { get; set; }
 
-        public Product Product { get; private set; }    
-        public Person Person { get; private set; }
+        public Product Product { get;  set; }    
+        public Person Person { get;  set; }
 
 
         public Purchase(int productId, int personId, DateTime? date)

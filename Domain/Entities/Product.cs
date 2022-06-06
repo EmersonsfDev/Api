@@ -14,7 +14,9 @@ namespace Domain.Entities
         public string Name { get; private set; }
         public string CodeERP { get; private set; }
         public Decimal Price { get; private set; }
-        public ICollection<Purchase> Products { get; private set; }
+        public ICollection<Purchase> Purchases { get;  set; }
+        public object Purchase { get; set; }
+
 
         public Product(string name,string codeErp, decimal price)
         {

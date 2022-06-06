@@ -15,7 +15,6 @@ namespace Infra.Data.Context.Maps
         public void Configure(EntityTypeBuilder<Person> builder)
         {
             builder.ToTable("Pessoa");
-            
             builder.HasKey(x => x.Id);
 
             builder.Property(x => x.Id)
