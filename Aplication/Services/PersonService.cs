@@ -15,9 +15,9 @@ namespace Aplication.Services
 {
     public class PersonService : IPersonService
     {
-        private readonly IPersonService _personRepository;
+        private readonly IPersonRepository _personRepository;
         private readonly IMapper _mapper;
-        public PersonService(IPersonService personRepository, IMapper mapper)
+        public PersonService(IPersonRepository personRepository, IMapper mapper)
         {
             _mapper = mapper;
             _personRepository = personRepository;   
@@ -33,8 +33,8 @@ namespace Aplication.Services
             if (!result.IsValid)
                 return ResultService.RequestError<PersonDTO>("Problemas de validade", result);
             
-            var person = _mapper.Map<PersonDTO>(personDTO);
-            var data = await _personRepository.CreatAsync(person);
+            var person = _mapper.Map<Person>(personDTO);
+            var data = await _personRepository.CreateAsync(person);
             return ResultService.Ok<PersonDTO>(_mapper.Map<PersonDTO>(data));
 
         }

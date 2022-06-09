@@ -11,10 +11,6 @@ namespace Aplication.Services.Interface
 {
     public interface IPersonService
     {
-        Task<ResultService<PersonDTO>> CreatAsync(PersonDTO personDTO)
-        {
-
-        }
-
+         Task<ResultService<PersonDTO>> CreatAsync(PersonDTO personDTO);
     }
 }

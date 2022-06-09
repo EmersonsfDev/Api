@@ -18,26 +18,26 @@ namespace Domain.Entities
         public Person Person { get;  set; }
 
 
-        public Purchase(int productId, int personId, DateTime? date)
+        public Purchase(int productId, int personId)
         {
-            Validation(productId, personId, date);
+            Validation(productId, personId);
         }
 
-        public Purchase(int id,int productId, int personId, DateTime? date)
+        public Purchase(int id,int productId, int personId)
         {
             DomainValidationExeption.When(id < 0, "ID  deve ser informado");
             Id = id;
-            Validation(productId, personId, date);
+            Validation(productId, personId);
         }
 
-        private void Validation(int productID, int personID, DateTime? date)
+        private void Validation(int productID, int personID)
         {
             DomainValidationExeption.When(productID < 0, "ID  produto deve ser informado");
             DomainValidationExeption.When(personID < 0, "ID  pessoa deve ser informado");
 
             ProductID = productID;
             PersonID = personID;
-            Date = date.Value;
+            Date = DateTime.Now;
         
         }
 

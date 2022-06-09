@@ -18,7 +18,7 @@ namespace Infra.Data.Context.Maps
             builder.HasKey(x => x.Id);
 
             builder.Property(x => x.Id)
-                   .HasColumnName("IDPessoa")
+                   .HasColumnName("Idpessoa")
                    .ValueGeneratedOnAdd();
            
             builder.Property(x => x.Name)

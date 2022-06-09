@@ -19,7 +19,7 @@ namespace Infra.Data.Repositories
             _db = db;
         }
        
-        async Task<Person> IPersonRepository.CreateAsync(Person person)
+         async Task<Person> IPersonRepository.CreateAsync(Person person)
         {
             _db.Add(person);
             await _db.SaveChangesAsync();

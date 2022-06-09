@@ -1,0 +1,13 @@
+{
+  "StringConnection": {
+    "DefautConnection": "Server=127.0.0.1;Port=5432;Database=MP_DOTNET6_API;User Id=postgres;Password=teste123;"
+  },
+  "logging": {
+    "LogLevel": {
+      "Default": "information",
+      "Microsoft.NetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+
+}

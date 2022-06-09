@@ -20,14 +20,16 @@ namespace Domain.Entities
 
         public Product(string name,string codeErp, decimal price)
         {
-            Validation(name, codeErp, price);   
+            Validation(name, codeErp, price);
+            Purchases = new List<Purchase>();
         }
 
         public Product(int id, string name, string codeErp, decimal price)
         {
             DomainValidationExeption.When(id < 0, "id deve ser informado");
             Id = id;
-            Validation(name, codeErp, price);   
+            Validation(name, codeErp, price);
+            Purchases = new List<Purchase>();
         }
 
         private void Validation(string name, string codeErp, decimal price)

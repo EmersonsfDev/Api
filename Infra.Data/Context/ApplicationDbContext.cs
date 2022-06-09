@@ -12,7 +12,6 @@ namespace Infra.Data.Context
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-
         }
         public DbSet<Person> People { get; set; }
         public DbSet<Product> Product { get; set; }
